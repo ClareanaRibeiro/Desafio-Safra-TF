@@ -25,14 +25,6 @@ export const getBanksById = async (banksId) => {
   return docSnap.data()
 };
 
-export const createDoc = (instituicao, tipo, saldo) => {
-  return addDoc(collection(db, 'Bancos'), {
-    instituicao,
-    tipo,
-    saldo,
-  });
-};
-
 export const getAllBanks = async () => {
   try {
     const querySnapshot = await getDocs(collection(db, 'Bancos'));
